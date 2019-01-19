@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA98F19221B8CD830048478A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F19121B8CD830048478A /* AppDelegate.m */; };
+		CA98F19521B8CD830048478A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F19421B8CD830048478A /* ViewController.m */; };
+		CA98F19821B8CD830048478A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA98F19621B8CD830048478A /* Main.storyboard */; };
+		CA98F19A21B8CD840048478A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA98F19921B8CD840048478A /* Assets.xcassets */; };
+		CA98F19D21B8CD840048478A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA98F19B21B8CD840048478A /* LaunchScreen.storyboard */; };
+		CA98F1A021B8CD840048478A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F19F21B8CD840048478A /* main.m */; };
+		CA98F1BF21B8CE2E0048478A /* wavwriter.c in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1AC21B8CE2E0048478A /* wavwriter.c */; };
+		CA98F1C021B8CE2E0048478A /* VoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1B221B8CE2E0048478A /* VoiceConverter.mm */; };
+		CA98F1C121B8CE2E0048478A /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA98F1B521B8CE2E0048478A /* libopencore-amrwb.a */; };
+		CA98F1C221B8CE2E0048478A /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA98F1B621B8CE2E0048478A /* libopencore-amrnb.a */; };
+		CA98F1C321B8CE2E0048478A /* libvo-amrwbenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA98F1B721B8CE2E0048478A /* libvo-amrwbenc.a */; };
+		CA98F1C421B8CE2E0048478A /* wavreader.c in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1B921B8CE2E0048478A /* wavreader.c */; };
+		CA98F1C521B8CE2E0048478A /* NarrowBandWavToAmr.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1BA21B8CE2E0048478A /* NarrowBandWavToAmr.mm */; };
+		CA98F1C621B8CE2E0048478A /* WidthBandWavToAmr.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1BE21B8CE2E0048478A /* WidthBandWavToAmr.mm */; };
+		CA98F1C921B8CF850048478A /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA98F1C821B8CF850048478A /* libc.tbd */; };
+		CA98F1CB21B8CF8E0048478A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA98F1CA21B8CF8E0048478A /* libc++.tbd */; };
+		CA98F1CD21B8D18B0048478A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA98F1CC21B8D18B0048478A /* AVFoundation.framework */; };
+		CA98F1E221B8D5770048478A /* EMCDDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1D321B8D5770048478A /* EMCDDeviceManager+Remind.m */; };
+		CA98F1E321B8D5770048478A /* EMCDDeviceManager+ProximitySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1D421B8D5770048478A /* EMCDDeviceManager+ProximitySensor.m */; };
+		CA98F1E421B8D5770048478A /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1DA21B8D5770048478A /* EMCDDeviceManager+Media.m */; };
+		CA98F1E521B8D5770048478A /* EMCDDeviceManager+Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1DD21B8D5770048478A /* EMCDDeviceManager+Microphone.m */; };
+		CA98F1E621B8D5770048478A /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1DE21B8D5770048478A /* EMAudioRecorderUtil.m */; };
+		CA98F1E721B8D5770048478A /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1DF21B8D5770048478A /* EMAudioPlayerUtil.m */; };
+		CA98F1E821B8D5770048478A /* EMCDDeviceManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CA98F1E021B8D5770048478A /* EMCDDeviceManagerBase.m */; };
+		CA98F1F321B8E7AD0048478A /* hello.amr in Resources */ = {isa = PBXBuildFile; fileRef = CA98F1F221B8E7AD0048478A /* hello.amr */; };
+		CA98F1F521B8EAA40048478A /* twohello.amr in Resources */ = {isa = PBXBuildFile; fileRef = CA98F1F421B8EAA30048478A /* twohello.amr */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA98F18D21B8CD830048478A /* AmrToWav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmrToWav.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA98F19021B8CD830048478A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA98F19121B8CD830048478A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA98F19321B8CD830048478A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CA98F19421B8CD830048478A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CA98F19721B8CD830048478A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA98F19921B8CD840048478A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA98F19C21B8CD840048478A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA98F19E21B8CD840048478A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA98F19F21B8CD840048478A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA98F1AA21B8CE2E0048478A /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		CA98F1AB21B8CE2E0048478A /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		CA98F1AC21B8CE2E0048478A /* wavwriter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wavwriter.c; sourceTree = "<group>"; };
+		CA98F1AD21B8CE2E0048478A /* wavreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavreader.h; sourceTree = "<group>"; };
+		CA98F1AF21B8CE2E0048478A /* enc_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enc_if.h; sourceTree = "<group>"; };
+		CA98F1B021B8CE2E0048478A /* NarrowBandWavToAmr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NarrowBandWavToAmr.h; sourceTree = "<group>"; };
+		CA98F1B121B8CE2E0048478A /* WidthBandWavToAmr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidthBandWavToAmr.h; sourceTree = "<group>"; };
+		CA98F1B221B8CE2E0048478A /* VoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VoiceConverter.mm; sourceTree = "<group>"; };
+		CA98F1B321B8CE2E0048478A /* wavwriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavwriter.h; sourceTree = "<group>"; };
+		CA98F1B521B8CE2E0048478A /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		CA98F1B621B8CE2E0048478A /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		CA98F1B721B8CE2E0048478A /* libvo-amrwbenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libvo-amrwbenc.a"; sourceTree = "<group>"; };
+		CA98F1B821B8CE2E0048478A /* VoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceConverter.h; sourceTree = "<group>"; };
+		CA98F1B921B8CE2E0048478A /* wavreader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wavreader.c; sourceTree = "<group>"; };
+		CA98F1BA21B8CE2E0048478A /* NarrowBandWavToAmr.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NarrowBandWavToAmr.mm; sourceTree = "<group>"; };
+		CA98F1BC21B8CE2E0048478A /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		CA98F1BD21B8CE2E0048478A /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		CA98F1BE21B8CE2E0048478A /* WidthBandWavToAmr.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WidthBandWavToAmr.mm; sourceTree = "<group>"; };
+		CA98F1C821B8CF850048478A /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		CA98F1CA21B8CF8E0048478A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		CA98F1CC21B8D18B0048478A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CA98F1CF21B8D5760048478A /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
+		CA98F1D021B8D5760048478A /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
+		CA98F1D221B8D5770048478A /* EMCDDeviceManager+Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Microphone.h"; sourceTree = "<group>"; };
+		CA98F1D321B8D5770048478A /* EMCDDeviceManager+Remind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Remind.m"; sourceTree = "<group>"; };
+		CA98F1D421B8D5770048478A /* EMCDDeviceManager+ProximitySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+ProximitySensor.m"; sourceTree = "<group>"; };
+		CA98F1D521B8D5770048478A /* EMCDDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManager.h; sourceTree = "<group>"; };
+		CA98F1D621B8D5770048478A /* EMCDDeviceManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerBase.h; sourceTree = "<group>"; };
+		CA98F1D721B8D5770048478A /* DemoErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoErrorCode.h; sourceTree = "<group>"; };
+		CA98F1D821B8D5770048478A /* EMAudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioPlayerUtil.h; sourceTree = "<group>"; };
+		CA98F1D921B8D5770048478A /* EMAudioRecorderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioRecorderUtil.h; sourceTree = "<group>"; };
+		CA98F1DA21B8D5770048478A /* EMCDDeviceManager+Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Media.m"; sourceTree = "<group>"; };
+		CA98F1DB21B8D5770048478A /* EMCDDeviceManager+ProximitySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+ProximitySensor.h"; sourceTree = "<group>"; };
+		CA98F1DC21B8D5770048478A /* EMCDDeviceManager+Remind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Remind.h"; sourceTree = "<group>"; };
+		CA98F1DD21B8D5770048478A /* EMCDDeviceManager+Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Microphone.m"; sourceTree = "<group>"; };
+		CA98F1DE21B8D5770048478A /* EMAudioRecorderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioRecorderUtil.m; sourceTree = "<group>"; };
+		CA98F1DF21B8D5770048478A /* EMAudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioPlayerUtil.m; sourceTree = "<group>"; };
+		CA98F1E021B8D5770048478A /* EMCDDeviceManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCDDeviceManagerBase.m; sourceTree = "<group>"; };
+		CA98F1E121B8D5770048478A /* EMCDDeviceManager+Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Media.h"; sourceTree = "<group>"; };
+		CA98F1F221B8E7AD0048478A /* hello.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello.amr; sourceTree = "<group>"; };
+		CA98F1F421B8EAA30048478A /* twohello.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = twohello.amr; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA98F18A21B8CD830048478A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA98F1CD21B8D18B0048478A /* AVFoundation.framework in Frameworks */,
+				CA98F1CB21B8CF8E0048478A /* libc++.tbd in Frameworks */,
+				CA98F1C921B8CF850048478A /* libc.tbd in Frameworks */,
+				CA98F1C121B8CE2E0048478A /* libopencore-amrwb.a in Frameworks */,
+				CA98F1C321B8CE2E0048478A /* libvo-amrwbenc.a in Frameworks */,
+				CA98F1C221B8CE2E0048478A /* libopencore-amrnb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA98F18421B8CD830048478A = {
+			isa = PBXGroup;
+			children = (
+				CA98F18F21B8CD830048478A /* AmrToWav */,
+				CA98F18E21B8CD830048478A /* Products */,
+				CA98F1C721B8CF850048478A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA98F18E21B8CD830048478A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F18D21B8CD830048478A /* AmrToWav.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA98F18F21B8CD830048478A /* AmrToWav */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1F421B8EAA30048478A /* twohello.amr */,
+				CA98F1F221B8E7AD0048478A /* hello.amr */,
+				CA98F1A821B8CE2E0048478A /* Opencore-AMR */,
+				CA98F19021B8CD830048478A /* AppDelegate.h */,
+				CA98F19121B8CD830048478A /* AppDelegate.m */,
+				CA98F19321B8CD830048478A /* ViewController.h */,
+				CA98F19421B8CD830048478A /* ViewController.m */,
+				CA98F19621B8CD830048478A /* Main.storyboard */,
+				CA98F19921B8CD840048478A /* Assets.xcassets */,
+				CA98F19B21B8CD840048478A /* LaunchScreen.storyboard */,
+				CA98F19E21B8CD840048478A /* Info.plist */,
+				CA98F19F21B8CD840048478A /* main.m */,
+			);
+			path = AmrToWav;
+			sourceTree = "<group>";
+		};
+		CA98F1A821B8CE2E0048478A /* Opencore-AMR */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1CE21B8D5760048478A /* delegates */,
+				CA98F1D121B8D5770048478A /* internal */,
+				CA98F1B421B8CE2E0048478A /* lib */,
+				CA98F1B021B8CE2E0048478A /* NarrowBandWavToAmr.h */,
+				CA98F1BA21B8CE2E0048478A /* NarrowBandWavToAmr.mm */,
+				CA98F1BB21B8CE2E0048478A /* opencore-amrnb */,
+				CA98F1A921B8CE2E0048478A /* opencore-amrwb */,
+				CA98F1AE21B8CE2E0048478A /* vo-amrwbenc */,
+				CA98F1B821B8CE2E0048478A /* VoiceConverter.h */,
+				CA98F1B221B8CE2E0048478A /* VoiceConverter.mm */,
+				CA98F1B921B8CE2E0048478A /* wavreader.c */,
+				CA98F1AD21B8CE2E0048478A /* wavreader.h */,
+				CA98F1AC21B8CE2E0048478A /* wavwriter.c */,
+				CA98F1B321B8CE2E0048478A /* wavwriter.h */,
+				CA98F1B121B8CE2E0048478A /* WidthBandWavToAmr.h */,
+				CA98F1BE21B8CE2E0048478A /* WidthBandWavToAmr.mm */,
+			);
+			path = "Opencore-AMR";
+			sourceTree = "<group>";
+		};
+		CA98F1A921B8CE2E0048478A /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1AA21B8CE2E0048478A /* if_rom.h */,
+				CA98F1AB21B8CE2E0048478A /* dec_if.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		CA98F1AE21B8CE2E0048478A /* vo-amrwbenc */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1AF21B8CE2E0048478A /* enc_if.h */,
+			);
+			path = "vo-amrwbenc";
+			sourceTree = "<group>";
+		};
+		CA98F1B421B8CE2E0048478A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1B521B8CE2E0048478A /* libopencore-amrwb.a */,
+				CA98F1B621B8CE2E0048478A /* libopencore-amrnb.a */,
+				CA98F1B721B8CE2E0048478A /* libvo-amrwbenc.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CA98F1BB21B8CE2E0048478A /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1BC21B8CE2E0048478A /* interf_dec.h */,
+				CA98F1BD21B8CE2E0048478A /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		CA98F1C721B8CF850048478A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1CC21B8D18B0048478A /* AVFoundation.framework */,
+				CA98F1CA21B8CF8E0048478A /* libc++.tbd */,
+				CA98F1C821B8CF850048478A /* libc.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA98F1CE21B8D5760048478A /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1CF21B8D5760048478A /* EMCDDeviceManagerDelegate.h */,
+				CA98F1D021B8D5760048478A /* EMCDDeviceManagerProximitySensorDelegate.h */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		CA98F1D121B8D5770048478A /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				CA98F1D721B8D5770048478A /* DemoErrorCode.h */,
+				CA98F1D821B8D5770048478A /* EMAudioPlayerUtil.h */,
+				CA98F1DF21B8D5770048478A /* EMAudioPlayerUtil.m */,
+				CA98F1D921B8D5770048478A /* EMAudioRecorderUtil.h */,
+				CA98F1DE21B8D5770048478A /* EMAudioRecorderUtil.m */,
+				CA98F1D521B8D5770048478A /* EMCDDeviceManager.h */,
+				CA98F1E121B8D5770048478A /* EMCDDeviceManager+Media.h */,
+				CA98F1DA21B8D5770048478A /* EMCDDeviceManager+Media.m */,
+				CA98F1D221B8D5770048478A /* EMCDDeviceManager+Microphone.h */,
+				CA98F1DD21B8D5770048478A /* EMCDDeviceManager+Microphone.m */,
+				CA98F1DB21B8D5770048478A /* EMCDDeviceManager+ProximitySensor.h */,
+				CA98F1D421B8D5770048478A /* EMCDDeviceManager+ProximitySensor.m */,
+				CA98F1DC21B8D5770048478A /* EMCDDeviceManager+Remind.h */,
+				CA98F1D321B8D5770048478A /* EMCDDeviceManager+Remind.m */,
+				CA98F1D621B8D5770048478A /* EMCDDeviceManagerBase.h */,
+				CA98F1E021B8D5770048478A /* EMCDDeviceManagerBase.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA98F18C21B8CD830048478A /* AmrToWav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA98F1A321B8CD840048478A /* Build configuration list for PBXNativeTarget "AmrToWav" */;
+			buildPhases = (
+				CA98F18921B8CD830048478A /* Sources */,
+				CA98F18A21B8CD830048478A /* Frameworks */,
+				CA98F18B21B8CD830048478A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AmrToWav;
+			productName = AmrToWav;
+			productReference = CA98F18D21B8CD830048478A /* AmrToWav.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA98F18521B8CD830048478A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = CoderWGB;
+				TargetAttributes = {
+					CA98F18C21B8CD830048478A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = CA98F18821B8CD830048478A /* Build configuration list for PBXProject "AmrToWav" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA98F18421B8CD830048478A;
+			productRefGroup = CA98F18E21B8CD830048478A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA98F18C21B8CD830048478A /* AmrToWav */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA98F18B21B8CD830048478A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA98F19D21B8CD840048478A /* LaunchScreen.storyboard in Resources */,
+				CA98F1F521B8EAA40048478A /* twohello.amr in Resources */,
+				CA98F19A21B8CD840048478A /* Assets.xcassets in Resources */,
+				CA98F19821B8CD830048478A /* Main.storyboard in Resources */,
+				CA98F1F321B8E7AD0048478A /* hello.amr in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA98F18921B8CD830048478A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA98F1E821B8D5770048478A /* EMCDDeviceManagerBase.m in Sources */,
+				CA98F1E521B8D5770048478A /* EMCDDeviceManager+Microphone.m in Sources */,
+				CA98F1E421B8D5770048478A /* EMCDDeviceManager+Media.m in Sources */,
+				CA98F1E221B8D5770048478A /* EMCDDeviceManager+Remind.m in Sources */,
+				CA98F1C021B8CE2E0048478A /* VoiceConverter.mm in Sources */,
+				CA98F1E621B8D5770048478A /* EMAudioRecorderUtil.m in Sources */,
+				CA98F1E721B8D5770048478A /* EMAudioPlayerUtil.m in Sources */,
+				CA98F1E321B8D5770048478A /* EMCDDeviceManager+ProximitySensor.m in Sources */,
+				CA98F19521B8CD830048478A /* ViewController.m in Sources */,
+				CA98F1C621B8CE2E0048478A /* WidthBandWavToAmr.mm in Sources */,
+				CA98F1A021B8CD840048478A /* main.m in Sources */,
+				CA98F1C521B8CE2E0048478A /* NarrowBandWavToAmr.mm in Sources */,
+				CA98F1C421B8CE2E0048478A /* wavreader.c in Sources */,
+				CA98F19221B8CD830048478A /* AppDelegate.m in Sources */,
+				CA98F1BF21B8CE2E0048478A /* wavwriter.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA98F19621B8CD830048478A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA98F19721B8CD830048478A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA98F19B21B8CD840048478A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA98F19C21B8CD840048478A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA98F1A121B8CD840048478A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CA98F1A221B8CD840048478A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA98F1A421B8CD840048478A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59NML6ZW3Q;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = AmrToWav/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AmrToWav/Opencore-AMR/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dosmono.iOS.CoderWGB.AmrToWav;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CA98F1A521B8CD840048478A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59NML6ZW3Q;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = AmrToWav/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AmrToWav/Opencore-AMR/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dosmono.iOS.CoderWGB.AmrToWav;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA98F18821B8CD830048478A /* Build configuration list for PBXProject "AmrToWav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA98F1A121B8CD840048478A /* Debug */,
+				CA98F1A221B8CD840048478A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA98F1A321B8CD840048478A /* Build configuration list for PBXNativeTarget "AmrToWav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA98F1A421B8CD840048478A /* Debug */,
+				CA98F1A521B8CD840048478A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA98F18521B8CD830048478A /* Project object */;
+}
